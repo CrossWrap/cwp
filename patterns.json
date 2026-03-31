@@ -1,0 +1,226 @@
+{
+  "tags_ativas": ["All", "Free","Buy", "pdf", "Download"],
+  "patterns": [
+    {
+      "id": "001",
+      "nome": "Crown of Torns",
+      "imagem": "imagens/crownoftorns.jpg",
+      "preco": 0.00,
+      "link": "free/crownoftorns.html",
+      "tags": ["Free"]
+    },
+	{
+      "id": "002",
+      "nome": "Catch Eye",
+      "imagem": "imagens/catcheye.jpg",
+      "preco": 0.00,
+      "link": "free/catcheye.html",
+      "tags": ["Free"]
+    },
+		{
+      "id": "003",
+      "nome": "Andromeda",
+      "imagem": "imagens/andromeda.jpg",
+      "preco": 0.00,
+      "link": "free/andromeda.html",
+      "tags": ["Free"]
+    },
+			{
+      "id": "004",
+      "nome": "Camouflage",
+      "imagem": "imagens/camouflage.jpg",
+      "preco": 0.00,
+      "link": "free/camouflage.html",
+      "tags": ["Free"]
+    },
+			{
+      "id": "005",
+      "nome": "Chevron",
+      "imagem": "imagens/chevron.jpg",
+      "preco": 0.00,
+      "link": "free/chevron.html",
+      "tags": ["Free"]
+    },
+			{
+      "id": "006",
+      "nome": "Chevron Variation ",
+      "imagem": "imagens/chevronvariation.jpg",
+      "preco": 0.00,
+      "link": "free/chevronvariation.html",
+      "tags": ["Free"]
+    },
+	
+				{
+      "id": "007",
+      "nome": "Cross Target",
+      "imagem": "imagens/crosstarget.jpg",
+      "preco": 0.00,
+      "link": "free/crosstarget.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "008",
+      "nome": "Delta Crucis",
+      "imagem": "imagens/deltacrucis.jpg",
+      "preco": 0.00,
+      "link": "free/deltacrucis.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "009",
+      "nome": "Destroyer",
+      "imagem": "imagens/destroyer.jpg",
+      "preco": 0.00,
+      "link": "free/destroyer.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "010",
+      "nome": "Falconry",
+      "imagem": "imagens/falconry.jpg",
+      "preco": 0.00,
+      "link": "free/falconry.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "011",
+      "nome": "Fish Scale",
+      "imagem": "imagens/fishscale.jpg",
+      "preco": 0.00,
+      "link": "free/fishscale.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "012",
+      "nome": "Hesperus",
+      "imagem": "imagens/hesperus.jpg",
+      "preco": 0.00,
+      "link": "free/hesperus.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "013",
+      "nome": "Hypnotic Star",
+      "imagem": "imagens/hypnoticstar.jpg",
+      "preco": 0.00,
+      "link": "free/hypnoticstar.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "014",
+      "nome": "Iroquois",
+      "imagem": "imagens/iroquois.jpg",
+      "preco": 0.00,
+      "link": "free/iroquois.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "015",
+      "nome": "Mandala",
+      "imagem": "imagens/mandala.jpg",
+      "preco": 0.00,
+      "link": "free/mandala.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "016",
+      "nome": "Maze",
+      "imagem": "imagens/maze.jpg",
+      "preco": 0.00,
+      "link": "free/maze.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "017",
+      "nome": "Moth",
+      "imagem": "imagens/moth.jpg",
+      "preco": 0.00,
+      "link": "free/moth.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "018",
+      "nome": "Spider Variation",
+      "imagem": "imagens/spidervariation.jpg",
+      "preco": 0.00,
+      "link": "free/spidervariation.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "019",
+      "nome": "Spider",
+      "imagem": "imagens/spider.jpg",
+      "preco": 0.00,
+      "link": "free/spider.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "020",
+      "nome": "Sunburst",
+      "imagem": "imagens/sunburst.jpg",
+      "preco": 0.00,
+      "link": "free/sunburst.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "021",
+      "nome": "The Minstrel",
+      "imagem": "imagens/theminstrel.jpg",
+      "preco": 0.00,
+      "link": "free/theminstrel.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "022",
+      "nome": "Volcano",
+      "imagem": "imagens/volcano.jpg",
+      "preco": 0.00,
+      "link": "free/volcano.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "022",
+      "nome": "Wild Flowers",
+      "imagem": "imagens/wildflowers.jpg",
+      "preco": 0.00,
+      "link": "free/wildflowers.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "023",
+      "nome": "Fish",
+      "imagem": "imagens/fish.jpg",
+      "preco": 0.00,
+      "link": "free/fish.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "024",
+      "nome": "Magnum Opus",
+      "imagem": "imagens/magnumopus.jpg",
+      "preco": 0.00,
+      "link": "free/magnumopus.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "025",
+      "nome": "Snowflake",
+      "imagem": "imagens/snowflake.jpg",
+      "preco": 0.00,
+      "link": "free/snowflake.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "026",
+      "nome": "Diamond",
+      "imagem": "imagens/diamond.jpg",
+      "preco": 0.00,
+      "link": "free/diamond.html",
+      "tags": ["Free"]
+    }			
+			
+		
+	
+	
+  ]
+}

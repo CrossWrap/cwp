@@ -1,540 +1,352 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de E-books</title>
+    <title>Catálogo de E-books - Ponto Cego</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background: #f5f5f5;
-            color: #333;
-            min-height: 130vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             padding: 20px;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
         }
 
         header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
-            padding: 30px;
             text-align: center;
+            color: white;
+            margin-bottom: 30px;
         }
 
-        h1 {
+        header h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
 
-        .subtitle {
-            color: #bdc3c7;
+        header p {
             font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
+            opacity: 0.9;
         }
 
-        .tags-container {
-            padding: 20px;
-            background: #f8f9fa;
-            border-bottom: 1px solid #dee2e6;
-            overflow-x: auto;
-            white-space: nowrap;
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            color: white;
         }
 
-        .tags-scroll {
-            display: inline-flex;
+        .contact-info a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .tags-filter {
+            display: flex;
+            flex-wrap: wrap;
             gap: 10px;
-            padding: 0 10px;
+            margin-bottom: 30px;
+            justify-content: center;
         }
 
         .tag-btn {
             padding: 10px 20px;
-            background: white;
-            border: 2px solid #3498db;
+            border: none;
             border-radius: 25px;
-            color: #3498db;
-            font-weight: 600;
             cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
             transition: all 0.3s ease;
-            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
         }
 
         .tag-btn:hover {
-            background: #3498db;
-            color: white;
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
         }
 
         .tag-btn.active {
-            background: #2c3e50;
-            border-color: #2c3e50;
-            color: white;
+            background: #ffd700;
+            color: #333;
         }
 
-        .search-container {
-            padding: 20px;
-            display: flex;
-            gap: 10px;
-            background: white;
-            border-bottom: 1px solid #dee2e6;
-        }
-
-        #searchInput {
-            flex: 1;
-            padding: 12px 20px;
-            border: 2px solid #dee2e6;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
-
-        #searchInput:focus {
-            outline: none;
-            border-color: #3498db;
-        }
-
-        .livros-container {
-            padding: 20px;
-            min-height: 400px;
-        }
-
-        .livros-grid {
+        .books-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 25px;
         }
 
-        .livro-card {
+        .book-card {
             background: white;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            padding: 15px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            gap: 15px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
         }
 
-        .livro-card:hover {
+        .book-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .livro-info {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .livro-imagem-container {
-            width: 150px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .livro-imagem {
+        .book-image {
             width: 100%;
-            height: auto;
-            object-fit: contain;
-            border-radius: 4px;
-            background: #f8f9fa;
+            height: 210;
+            object-fit: cover;
+            background: #f0f0f0;
         }
 
-        .livro-titulo {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #2c3e50;
+        .book-info {
+            padding: 5px;
+        }
+
+        .book-title {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 2px;
+            font-weight: 700;
+        }
+
+        .book-price {
+            font-size: 1.2rem;
+            color: #667eea;
+            font-weight: bold;
             margin-bottom: 5px;
         }
 
-        .livro-autor {
-            font-size: 1rem;
-            color: #7f8c8d;
-            font-style: italic;
-            margin-bottom: 10px;
+        .book-price.free {
+            color: #27ae60;
         }
 
-        .btn-descricao {
-            background: none;
-            border: 1px solid #3498db;
-            color: #3498db;
-            padding: 6px 12px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            transition: 0.3s;
-            align-self: flex-start;
-        }
-
-        .btn-descricao:hover {
-            background: #3498db;
-            color: white;
-        }
-
-        .livro-tags {
+        .book-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
             margin-bottom: 15px;
         }
 
-        .livro-tag {
-            background: #e8f4fc;
-            color: #3498db;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.85rem;
-        }
-
-        .livro-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-        }
-
-        .livro-preco {
-            font-weight: bold;
-            color: #27ae60;
-            font-size: 1.2rem;
-        }
-
-        .livro-nivel {
-            background: #2c3e50;
+        .book-tag {
+            background: #667eea;
             color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 600;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
         }
 
-        .livro-status {
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-
-        .status-disponivel {
-            background: #d4edda;
-            color: #155724;
-        }
-
-        .status-esgotado {
-            background: #f8d7da;
-            color: #721c24;
-        }
-
-        .status-pre-venda {
-            background: #fff3cd;
-            color: #856404;
-        }
-
-        .btn-comprar {
+        .book-link {
             display: block;
-            width: 100%;
-            padding: 12px;
-            background: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
+            padding: 12px;
+            border-radius: 8px;
             text-decoration: none;
-            border-radius: 6px;
             font-weight: 600;
-            transition: background 0.3s ease;
-            border: none;
-            cursor: pointer;
+            transition: opacity 0.3s ease;
         }
 
-        .btn-comprar:hover {
-            background: #34495e;
+        .book-link:hover {
+            opacity: 0.9;
         }
 
-        .btn-desativado {
-            background: #95a5a6;
-            cursor: not-allowed;
-            pointer-events: none;
-        }
-
-        .no-results {
-            text-align: center;
-            padding: 40px;
-            color: #7f8c8d;
-            font-size: 1.1rem;
-            grid-column: 1 / -1;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            border-top: 1px solid #dee2e6;
-            background: #f8f9fa;
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-content {
-            background-color: #fff;
-            margin: 5% auto;
-            padding: 20px;
-            width: 80%;
-            max-width: 600px;
+        .stats-bar {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
             border-radius: 10px;
-            max-height: 70vh;
-            overflow-y: auto;
+            margin-bottom: 20px;
+            color: white;
+            text-align: center;
         }
 
-        .fechar {
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
+        .loading {
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            padding: 50px;
         }
 
-        .fechar:hover {
-            color: #000;
+        .no-books {
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
         }
 
-        #modalTitulo {
-            margin-top: 0;
-            color: #2c3e50;
-            padding-right: 20px;
-        }
-
-        #modalDescricaoTexto {
-            line-height: 1.3;
-            margin-top: 15px;
-            white-space: pre-wrap;
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+            opacity: 0.8;
         }
 
         @media (max-width: 768px) {
-            .livros-grid {
-                grid-template-columns: 1fr;
+            header h1 {
+                font-size: 2rem;
             }
 
-            .livro-card {
-                flex-direction: column;
-            }
-
-            .livro-imagem-container {
-                width: 100%;
-                max-width: 200px;
-                margin: 0 auto 15px;
+            .books-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
         }
     </style>
-<header style="text-align: left;"> <!-- Remove a centralização padrão -->
-    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 15px; flex-wrap: wrap;">
-        <!-- Logotipo -->
-        <img src="logo.jpg" alt="Ponto Cego Logo" style="height: 70px; width: auto; border-radius: 8px;">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cross Wrap Pattern</h1>         
+            <p>Find digital patterns by category or title.</p>
+        </header>
 
-        <!-- Título e subtítulo -->
-        <div>
-            <h1 style="margin: 0; font-size: 2.5rem;">Ponto Cego</h1>
-            <p class="subtitle" style="margin: 5px 0 0 0; color: #bdc3c7;">
-                Encontre livros digitais por categoria ou título
-            </p>
-        </div>
-    </div>
-
-    <!-- Bloco de contato para pedidos especiais -->
-    <div
-        style="background: rgba(255, 255, 255, 0.15); padding: 12px 20px; border-radius: 40px; display: inline-block; margin-top: 10px; font-size: 1rem; backdrop-filter: blur(2px);">
-        📬 <strong>Pedidos especiais, outros formatos ou compra direta:</strong><br>
-        Envie um e‑mail para
-        <a href="mailto:ademir_romano@hotmail.com"
-            style="color: #fff; font-weight: 700; text-decoration: underline; background: rgba(0,0,0,0.2); padding: 4px 10px; border-radius: 30px; margin-left: 5px; white-space: nowrap;">
-            ademir_romano@hotmail.com
-        </a>
-    </div>
-</header>
-
-        <div class="tags-container">
-            <div class="tags-scroll" id="tagsList">
-                <div class="tag-btn active" data-tag="todos">Todos</div>
-            </div>
+        <div class="contact-info">
+            <p>📬 <strong>Pedidos especiais, outros formatos ou compra direta:</strong></p>
+            <p>Send an email to <a href="mailto:ademir_romano@hotmail.com">ademir_romano@hotmail.com</a></p>
         </div>
 
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Buscar por título, autor ou tag...">
+        <div class="stats-bar" id="statsBar">
+            Loading Patterns...
         </div>
 
-        <div class="livros-container">
-            <div class="livros-grid" id="livrosList">
-                <div class="no-results">Carregando livros...</div>
-            </div>
+        <div class="tags-filter" id="tagsFilter">
+            <!-- Tags serão inseridas via JavaScript -->
         </div>
 
-        <div class="footer">
-            <p>Catálogo de E-books v1.0 | <span id="livrosCount">0</span> livro(s) | Tag: <span
-                    id="activeTag">todos</span></p>
+        <div class="books-grid" id="booksGrid">
+            <div class="loading">Loading Patterns...</div>
         </div>
-    </div>
 
-    <!-- Modal -->
-    <div id="modalDescricao" class="modal">
-        <div class="modal-content">
-            <span class="fechar">&times;</span>
-            <h3 id="modalTitulo"></h3>
-            <div id="modalDescricaoTexto"></div>
-        </div>
+        <footer>
+            <p>Catalog of Patterns | <span id="bookCount">0</span> patterns | Tag: <span id="currentTag">all</span></p>
+        </footer>
     </div>
 
     <script>
-        let livros = [];
-        let tagsAtivas = [];
-        let tagSelecionada = 'todos';
-        let termoBusca = '';
+        // URL do arquivo JSON (ajuste conforme necessário)
+        const JSON_URL = 'patterns.json';
 
-        async function carregarDados() {
+        let booksData = [];
+        let activeTags = [];
+        let currentTag = 'All';
+
+        // Carregar dados do JSON
+        async function loadBooks() {
             try {
-                const response = await fetch('livros.json');
+                const response = await fetch(JSON_URL);
                 const data = await response.json();
-                livros = data.livros || [];
-                tagsAtivas = data.tags_ativas || ['todos'];
-                renderizarTags();
-                renderizarLivros();
-                atualizarContador();
+                
+                booksData = data.patterns || [];
+                activeTags = data.tags_ativas || [];
+                
+                renderTags();
+                renderBooks();
+                updateStats();
             } catch (error) {
-                document.getElementById('livrosList').innerHTML = '<div class="no-results">Erro ao carregar livros.</div>';
+                console.error('Erro ao carregar livros:', error);
+                document.getElementById('booksGrid').innerHTML = 
+                    '<div class="no-books">Erro ao carregar catálogo. Verifique o arquivo patterns.json</div>';
             }
         }
 
-        function renderizarTags() {
-            const tagsContainer = document.getElementById('tagsList');
+        // Renderizar botões de tag
+        function renderTags() {
+            const tagsContainer = document.getElementById('tagsFilter');
             tagsContainer.innerHTML = '';
-            tagsAtivas.forEach(tag => {
-                const tagBtn = document.createElement('div');
-                tagBtn.className = `tag-btn ${tag === tagSelecionada ? 'active' : ''}`;
-                tagBtn.textContent = tag;
-                tagBtn.dataset.tag = tag;
-                tagBtn.onclick = () => {
-                    tagSelecionada = tag;
-                    renderizarTags();
-                    renderizarLivros();
-                    atualizarContador();
-                };
-                tagsContainer.appendChild(tagBtn);
+
+            activeTags.forEach(tag => {
+                const btn = document.createElement('button');
+                btn.className = `tag-btn ${tag.trim() === currentTag.trim() ? 'active' : ''}`;
+                btn.textContent = tag.trim();
+                btn.onclick = () => filterByTag(tag.trim());
+                tagsContainer.appendChild(btn);
             });
         }
 
-        function filtrarLivros() {
-            return livros.filter(livro => {
-                if (tagSelecionada !== 'todos' && !livro.tags.includes(tagSelecionada)) return false;
-                if (termoBusca) {
-                    const busca = termoBusca.toLowerCase();
-                    return livro.titulo.toLowerCase().includes(busca) ||
-                        livro.autor.toLowerCase().includes(busca) ||
-                        livro.descricao.toLowerCase().includes(busca) ||
-                        livro.tags.some(tag => tag.toLowerCase().includes(busca));
-                }
-                return true;
-            });
+        // Filtrar livros por tag
+        function filterByTag(tag) {
+            currentTag = tag;
+            renderTags();
+            renderBooks();
+            updateStats();
         }
 
-        function renderizarLivros() {
-            const container = document.getElementById('livrosList');
-            const livrosFiltrados = filtrarLivros();
+        // Renderizar livros
+        function renderBooks() {
+            const grid = document.getElementById('booksGrid');
+            
+            const filteredBooks = currentTag === 'All' 
+                ? booksData 
+                : booksData.filter(book => 
+                    book.tags && book.tags.some(t => t.trim() === currentTag)
+                );
 
-            if (livrosFiltrados.length === 0) {
-                container.innerHTML = `<div class="no-results">Nenhum livro encontrado.</div>`;
+            if (filteredBooks.length === 0) {
+                grid.innerHTML = '<div class="no-books">No patterns found for this category</div>';
                 return;
             }
 
-            container.innerHTML = livrosFiltrados.map(livro => {
-                const statusClass = `status-${livro.status}`;
-                const statusText = {
-                    'disponivel': '✅ Disponível',
-                    'esgotado': '❌ Esgotado',
-                    'pre-venda': '🔜 Pré-venda'
-                }[livro.status] || livro.status;
-
-                const botao = livro.status === 'disponivel' && livro.link
-                    ? `<a href="${livro.link}" target="_blank" class="btn-comprar">Comprar</a>`
-                    : `<div class="btn-comprar btn-desativado">${statusText}</div>`;
-
-                return `
-                    <div class="livro-card">
-                        <div class="livro-info">
-                            <div class="livro-titulo">${livro.titulo}</div>
-                            <div class="livro-autor">${livro.autor}</div>
-                            <button class="btn-descricao" data-id="${livro.id}">📖 Ver descrição</button>
-                            <div class="livro-tags">
-                                ${livro.tags.map(tag => `<span class="livro-tag">${tag}</span>`).join('')}
-                            </div>
-                            <div class="livro-meta">
-                                <span class="livro-preco">R$ ${livro.preco.toFixed(2).replace('.', ',')}</span>
-                                <span class="livro-nivel">${livro.nivel}</span>
-                            </div>
-                            ${botao}
+            grid.innerHTML = filteredBooks.map(book => `
+                <div class="book-card">
+                    <img 
+                        src="${book.imagem || 'imagens/placeholder.jpg'}" 
+                        alt="${book.nome}" 
+                        class="book-image"
+                        onerror="this.src='https://via.placeholder.com/280x350?text=Sem+Imagem'"
+                    >
+                    <div class="book-info">
+                        <h3 class="book-title">${book.nome}</h3>
+                        <div class="book-price ${book.preco === 0 ? 'free' : ''}">
+                            ${book.preco === 0 ? 'FREE' : `R$ ${book.preco.toFixed(2).replace('.', ',')}`}
                         </div>
-                        <div class="livro-imagem-container">
-                            <img class="livro-imagem" src="${livro.imagem}" alt="${livro.titulo}" onerror="this.src='https://via.placeholder.com/150x200?text=Sem+Imagem'">
+                        <div class="book-tags">
+                            ${book.tags ? book.tags.map(tag => 
+                                `<span class="book-tag">${tag.trim()}</span>`
+                            ).join('') : ''}
                         </div>
+                        <a href="${book.link}" target="_blank" class="book-link">
+                            🔗 LINK
+                        </a>
                     </div>
-                `;
-            }).join('');
+                </div>
+            `).join('');
+
+            document.getElementById('bookCount').textContent = filteredBooks.length;
         }
 
-        function atualizarContador() {
-            document.getElementById('livrosCount').textContent = filtrarLivros().length;
-            document.getElementById('activeTag').textContent = tagSelecionada;
+        // Atualizar estatísticas
+        function updateStats() {
+            const statsBar = document.getElementById('statsBar');
+            const totalBooks = booksData.length;
+            const freeBooks = booksData.filter(b => b.preco === 0).length;
+            
+            statsBar.innerHTML = `
+                <strong>Total:</strong> ${totalBooks} patterns | 
+                <strong>Free:</strong> ${freeBooks} | 
+                <strong>To Buy:</strong> ${totalBooks - freeBooks}
+            `;
+            
+            document.getElementById('currentTag').textContent = currentTag.toLowerCase();
         }
 
-        // Modal
-        const modal = document.getElementById('modalDescricao');
-        const modalTitulo = document.getElementById('modalTitulo');
-        const modalDescricao = document.getElementById('modalDescricaoTexto');
-
-        function abrirModal(id) {
-            const livro = livros.find(l => l.id === id);
-            if (!livro) return;
-            modalTitulo.innerText = livro.titulo;
-            modalDescricao.innerHTML = livro.descricao.replace(/\n/g, '<br>');
-            modal.style.display = 'block';
-        }
-
-        document.querySelector('.fechar').onclick = () => modal.style.display = 'none';
-        window.onclick = e => { if (e.target === modal) modal.style.display = 'none'; };
-
-        document.getElementById('livrosList').addEventListener('click', e => {
-            if (e.target.classList.contains('btn-descricao')) {
-                abrirModal(e.target.dataset.id);
-            }
-        });
-
-        document.getElementById('searchInput').addEventListener('input', function (e) {
-            termoBusca = e.target.value.trim().toLowerCase();
-            renderizarLivros();
-            atualizarContador();
-        });
-
-        document.addEventListener('DOMContentLoaded', carregarDados);
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', loadBooks);
     </script>
 </body>
-
 </html>
