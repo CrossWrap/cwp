@@ -53,8 +53,21 @@
             font-weight: bold;
         }
 
-        .contact-info a:hover {
-            text-decoration: underline;
+        .search-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .tags-filter {
@@ -72,9 +85,9 @@
             cursor: pointer;
             font-size: 14px;
             font-weight: 600;
-            transition: all 0.3s ease;
             background: rgba(255, 255, 255, 0.2);
             color: white;
+            transition: all 0.3s ease;
         }
 
         .tag-btn:hover {
@@ -89,7 +102,7 @@
 
         .books-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 25px;
         }
 
@@ -107,19 +120,19 @@
 
         .book-image {
             width: 100%;
-            height: 210;
+            height: 280px;
             object-fit: cover;
             background: #f0f0f0;
         }
 
         .book-info {
-            padding: 5px;
+            padding: 20px;
         }
 
         .book-title {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             color: #333;
-            margin-bottom: 2px;
+            margin-bottom: 8px;
             font-weight: 700;
         }
 
@@ -127,7 +140,7 @@
             font-size: 1.2rem;
             color: #667eea;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
 
         .book-price.free {
@@ -146,7 +159,36 @@
             color: white;
             padding: 5px 10px;
             border-radius: 15px;
-            font-size: 12px;
+            font-size: 15px;
+        }
+
+        .cart-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .cart-checkbox:hover {
+            background: #e9ecef;
+        }
+
+        .cart-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #667eea;
+        }
+
+        .cart-checkbox label {
+            cursor: pointer;
+            font-weight: 600;
+            color: #495057;
+            flex: 1;
         }
 
         .book-link {
@@ -158,11 +200,11 @@
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: opacity 0.3s ease;
         }
 
-        .book-link:hover {
-            opacity: 0.9;
+        .book-link.secondary {
+            background: #6c757d;
+            margin-top: 8px;
         }
 
         .stats-bar {
@@ -171,17 +213,12 @@
             border-radius: 10px;
             margin-bottom: 20px;
             color: white;
-            text-align: center;
+            text-align: center;			
+			font-size: 23px; 
+			font-weight: bold;
         }
 
-        .loading {
-            text-align: center;
-            color: white;
-            font-size: 1.2rem;
-            padding: 50px;
-        }
-
-        .no-books {
+        .loading, .no-books {
             text-align: center;
             color: white;
             font-size: 1.2rem;
@@ -190,21 +227,179 @@
             border-radius: 10px;
         }
 
+        /* Carrinho flutuante */
+        .cart-fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .cart-button {
+            background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+            border: none;
+            border-radius: 60px;
+            padding: 18px 28px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #333;
+        }
+
+        .cart-count {
+            background: #e74c3c;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 8px;
+            font-size: 14px;
+        }
+
+        /* Modal */
+        .cart-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1001;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cart-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 100%;
+            overflow: auto;
+            padding: 25px;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .cart-header h2 {
+            color: #333;
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .cart-items {
+            max-height: 250px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .cart-item-price {
+            font-size: 0.9rem;
+            color: #667eea;
+        }
+
+        .cart-item-remove {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .cart-total {
+            text-align: right;
+            padding-top: 15px;
+            border-top: 2px solid #eee;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .cart-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .info-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 13px;
+            color: #666;
+            border-left: 4px solid #ffd700;
+        }
+
+        .info-section h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .send-order-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .copy-order-btn {
+            width: 100%;
+            background: #6c757d;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
         footer {
             text-align: center;
             color: white;
             margin-top: 40px;
             padding: 20px;
-            opacity: 0.8;
         }
 
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
             .books-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             }
         }
     </style>
@@ -216,18 +411,35 @@
             <p>Find digital patterns by category or title.</p>
         </header>
 
-        <div class="contact-info">
-            <p>📬 <strong>Special orders, other formats, or direct purchase:</strong></p>
-            <p>Send an email to <a href="mailto:cross_wrap_pattern@hotmail.com">cross_wrap_pattern@hotmail.com</a></p>
-        </div>
+		<div style="font-size: 18px; color: white; line-height: 1.6;">
+			<div style="margin-bottom: 30px;">
+				<p style="font-size: 22px; font-weight: bold;">📦 How It Works</p>
+				<p>✅ After your purchase, you'll receive an <strong>HTML file via email</strong> for each pattern bought. Inside the file, you'll find <strong>step-by-step instructions</strong>.</p>
+				<p>💾 Save the file to any folder on your computer (Desktop, Documents, etc.).</p>
+				<p>🖱️ Double-click the file — it will open automatically in your web browser.</p>
+				<p>🔧 No installation, no plugins, no extra steps. Just save, click, and follow the instructions.</p>
+				<p>💳 Accepted payment methods: PayPal</p>
+				
+				
+				
+			</div>
+
+			<div class="contact-info" style="font-size: 18px; color: white;">
+				
+				<p>❓ <strong>Any questions? Send an email to:</strong> <a href="mailto:cross_wrap_pattern@hotmail.com" style="color: #FFD966; text-decoration: underline;">cross_wrap_pattern@hotmail.com</a> 📨</p>
+				<p>🌐 We'll get back to you as soon as possible!</p>
+			</div>
+		</div>	
 
         <div class="stats-bar" id="statsBar">
             Loading Patterns...
         </div>
 
-        <div class="tags-filter" id="tagsFilter">
-            <!-- Tags serão inseridas via JavaScript -->
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-box" placeholder="🔍 Search by pattern name...">
         </div>
+
+        <div class="tags-filter" id="tagsFilter"></div>
 
         <div class="books-grid" id="booksGrid">
             <div class="loading">Loading Patterns...</div>
@@ -238,114 +450,335 @@
         </footer>
     </div>
 
-    <script>
-        // URL do arquivo JSON (ajuste conforme necessário)
-        const JSON_URL = 'patterns.json';
+   <!-- Floating Cart Button -->
+<div class="cart-fab">
+    <button class="cart-button" onclick="toggleCart()">
+        🛒 Cart
+        <span class="cart-count" id="cartCountFloat">0</span>
+    </button>
+</div>
 
+<!-- Cart Modal -->
+<div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+        <div class="cart-header">
+            <h2>🛒 Your Cart</h2>
+            <button class="close-cart" onclick="toggleCart()">✖</button>
+        </div>
+        
+        <div id="cartItemsList" class="cart-items">
+            <p style="text-align:center; color:#999;">Your cart is empty</p>
+        </div>
+        
+        <div class="cart-total" id="cartTotalDisplay">
+            Total: $ 0,00
+        </div>
+        
+        <div class="cart-form">
+            <input type="text" id="customerName" placeholder="Your full name *">
+            <input type="email" id="customerEmail" placeholder="Your email *">
+            
+            <!-- INFO SECTION - TRANSLATED TO ENGLISH -->
+            <div class="info-section">
+                <h4>📌 HOW TO COMPLETE YOUR ORDER</h4>
+                <p><strong>Option 1 (Recommended):</strong> Click "Send Order" below. Your email will open with all order details pre-filled. Just hit send!</p>
+                <p><strong>Option 2 (Alternative):</strong> If email doesn't open automatically, click "Copy Order", paste it into your email, and send to <strong>cross_wrap_pattern@hotmail.com</strong></p>
+                <br>
+                
+                <p><strong>💳 PAYMENT METHODS:</strong></p>
+                <p>• <strong>PayPal</strong> (credit card, debit card, or PayPal balance)</p>
+                <p>• <strong>Payment email:</strong> <code style="background: #eee; padding: 2px 6px; border-radius: 4px;">cross_wrap_pattern@hotmail.com</code></p>
+                <br>
+                
+                <p><strong>📦 DELIVERY:</strong> Digital - sent via email after payment confirmation</p>
+                <p><strong>⏱ PROCESSING TIME:</strong> Within 24 hours after payment confirmation</p>
+                <p><strong>❓ QUESTIONS:</strong> cross_wrap_pattern@hotmail.com</p>
+            </div>
+            <!-- END INFO SECTION -->
+
+            <button class="send-order-btn" onclick="sendOrder()">
+                📧 Send Order (Opens your email)
+            </button>
+            <button class="copy-order-btn" onclick="copyOrderToClipboard()">
+                📋 Copy Order (Send manually)
+            </button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © Cross Wrap Pattern — All digital products are delivered via email.
+</footer>
+
+<script>
+        const JSON_URL = 'patterns.json';
         let booksData = [];
         let activeTags = [];
         let currentTag = 'All';
+        let currentSearchTerm = '';
+        let cart = [];
 
-        // Carregar dados do JSON
         async function loadBooks() {
             try {
                 const response = await fetch(JSON_URL);
                 const data = await response.json();
-                
                 booksData = data.patterns || [];
                 activeTags = data.tags_ativas || [];
-                
                 renderTags();
                 renderBooks();
                 updateStats();
+                loadCartFromStorage();
+                updateCartDisplay();
             } catch (error) {
-                console.error('Erro ao carregar livros:', error);
-                document.getElementById('booksGrid').innerHTML = 
-                    '<div class="no-books">Erro ao carregar catálogo. Verifique o arquivo patterns.json</div>';
+                document.getElementById('booksGrid').innerHTML = '<div class="no-books">Error loading catalog.</div>';
             }
         }
 
-        // Renderizar botões de tag
         function renderTags() {
             const tagsContainer = document.getElementById('tagsFilter');
             tagsContainer.innerHTML = '';
-
-            activeTags.forEach(tag => {
+            const allTags = ['All', ...activeTags.filter(tag => tag !== 'All')];
+            allTags.forEach(tag => {
                 const btn = document.createElement('button');
-                btn.className = `tag-btn ${tag.trim() === currentTag.trim() ? 'active' : ''}`;
-                btn.textContent = tag.trim();
-                btn.onclick = () => filterByTag(tag.trim());
+                btn.className = `tag-btn ${tag === currentTag ? 'active' : ''}`;
+                btn.textContent = tag;
+                btn.onclick = () => {
+                    currentTag = tag;
+                    renderTags();
+                    renderBooks();
+                    updateStats();
+                };
                 tagsContainer.appendChild(btn);
             });
         }
 
-        // Filtrar livros por tag
-        function filterByTag(tag) {
-            currentTag = tag;
-            renderTags();
+        function handleSearch() {
+            currentSearchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
             renderBooks();
             updateStats();
         }
 
-        // Renderizar livros
-        function renderBooks() {
-            const grid = document.getElementById('booksGrid');
-            
-            const filteredBooks = currentTag === 'All' 
-                ? booksData 
-                : booksData.filter(book => 
-                    book.tags && book.tags.some(t => t.trim() === currentTag)
-                );
+        function getFilteredBooks() {
+            let filtered = booksData;
+            if (currentTag !== 'All') {
+                filtered = filtered.filter(book => book.tags && book.tags.some(t => t === currentTag));
+            }
+            if (currentSearchTerm !== '') {
+                filtered = filtered.filter(book => book.nome.toLowerCase().includes(currentSearchTerm));
+            }
+            return filtered;
+        }
 
-            if (filteredBooks.length === 0) {
-                grid.innerHTML = '<div class="no-books">No patterns found for this category</div>';
+        function addToCart(bookId, bookNome, bookPreco) {
+            const existing = cart.find(item => item.id === bookId);
+            if (existing) {
+                existing.quantity++;
+            } else {
+                cart.push({ id: bookId, nome: bookNome, preco: bookPreco, quantity: 1 });
+            }
+            saveCart();
+            updateCartDisplay();
+            renderBooks();
+        }
+
+        function removeFromCart(bookId) {
+            cart = cart.filter(item => item.id !== bookId);
+            saveCart();
+            updateCartDisplay();
+            renderBooks();
+        }
+
+        function updateQuantity(bookId, newQty) {
+            const item = cart.find(item => item.id === bookId);
+            if (item) {
+                if (newQty <= 0) {
+                    removeFromCart(bookId);
+                } else {
+                    item.quantity = newQty;
+                    saveCart();
+                    updateCartDisplay();
+                }
+            }
+        }
+
+        function calculateTotal() {
+            return cart.reduce((sum, item) => sum + (item.preco * item.quantity), 0);
+        }
+
+        function isInCart(bookId) {
+            return cart.some(item => item.id === bookId);
+        }
+
+        function saveCart() {
+            localStorage.setItem('crossWrapCart', JSON.stringify(cart));
+        }
+
+        function loadCartFromStorage() {
+            const saved = localStorage.getItem('crossWrapCart');
+            if (saved) cart = JSON.parse(saved);
+        }
+
+        function toggleCart() {
+            const modal = document.getElementById('cartModal');
+            modal.style.display = modal.style.display === 'none' ? 'flex' : 'none';
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const container = document.getElementById('cartItemsList');
+            const totalDisplay = document.getElementById('cartTotalDisplay');
+            const countFloat = document.getElementById('cartCountFloat');
+            const total = calculateTotal();
+            const itemCount = cart.reduce((sum, i) => sum + i.quantity, 0);
+            countFloat.textContent = itemCount;
+            
+            if (cart.length === 0) {
+                container.innerHTML = '<p style="text-align:center; color:#999;">Your cart is empty</p>';
+                totalDisplay.innerHTML = `Total: $ ${total.toFixed(2).replace('.', ',')}`;
                 return;
             }
-
-            grid.innerHTML = filteredBooks.map(book => `
-                <div class="book-card">
-                    <img 
-                        src="${book.imagem || 'imagens/placeholder.jpg'}" 
-                        alt="${book.nome}" 
-                        class="book-image"
-                        onerror="this.src='https://via.placeholder.com/280x350?text=Sem+Imagem'"
-                    >
-                    <div class="book-info">
-                        <h3 class="book-title">${book.nome}</h3>
-                        <div class="book-price ${book.preco === 0 ? 'free' : ''}">
-                            ${book.preco === 0 ? 'FREE' : `R$ ${book.preco.toFixed(2).replace('.', ',')}`}
-                        </div>
-                        <div class="book-tags">
-                            ${book.tags ? book.tags.map(tag => 
-                                `<span class="book-tag">${tag.trim()}</span>`
-                            ).join('') : ''}
-                        </div>
-                        <a href="${book.link}" target="_blank" class="book-link">
-                            🔗 LINK
-                        </a>
+            
+            container.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <div>
+                        <div class="cart-item-name">${item.nome}</div>
+                        <div class="cart-item-price">$ ${item.preco.toFixed(2).replace('.', ',')} each</div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <button onclick="updateQuantity('${item.id}', ${item.quantity - 1})" style="width: 30px;">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="updateQuantity('${item.id}', ${item.quantity + 1})" style="width: 30px;">+</button>
+                        <button class="cart-item-remove" onclick="removeFromCart('${item.id}')">Remove</button>
                     </div>
                 </div>
             `).join('');
-
-            document.getElementById('bookCount').textContent = filteredBooks.length;
+            totalDisplay.innerHTML = `Total: $ ${total.toFixed(2).replace('.', ',')}`;
         }
 
-        // Atualizar estatísticas
-        function updateStats() {
-            const statsBar = document.getElementById('statsBar');
-            const totalBooks = booksData.length;
-            const freeBooks = booksData.filter(b => b.preco === 0).length;
+        // Send order (opens email automatically)
+        function sendOrder() {
+            const name = document.getElementById('customerName').value.trim();
+            const email = document.getElementById('customerEmail').value.trim();
             
-            statsBar.innerHTML = `
-                <strong>Total:</strong> ${totalBooks} patterns | 
-                <strong>Free:</strong> ${freeBooks} | 
-                <strong>To Buy:</strong> ${totalBooks - freeBooks}
-            `;
+            if (!name || !email) {
+                alert('⚠️ Please fill in your name and email.');
+                return;
+            }
             
+            if (cart.length === 0) {
+                alert('⚠️ Your cart is empty.');
+                return;
+            }
+            
+            const total = calculateTotal();
+            const orderItems = cart.map(item => 
+                `• ${item.nome} x${item.quantity} - $ ${(item.preco * item.quantity).toFixed(2).replace('.', ',')}`
+            ).join('\n');
+            
+            const subject = `ORDER - ${name}`;
+            const body = `==========================================\n` +
+                         `ORDER - CROSS WRAP PATTERN\n` +
+                         `==========================================\n\n` +
+                         `CUSTOMER DETAILS:\n` +
+                         `Name: ${name}\n` +
+                         `Email: ${email}\n\n` +
+                         `==========================================\n` +
+                         `ORDER ITEMS:\n` +
+                         `==========================================\n` +
+                         `${orderItems}\n\n` +
+                         `TOTAL: $ ${total.toFixed(2).replace('.', ',')}\n\n` +
+                         `--- FOR SELLER ---\n` +
+                         `After payment, send files to: ${email}`;
+            
+            window.location.href = `mailto:cross_wrap_pattern@hotmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            alert(`✅ Your email will open!\n\nPlease check if the details are correct and click send.\n\nTotal: $ ${total.toFixed(2).replace('.', ',')}`);
+        }
+
+        // Copy order (fallback for users without email client)
+        function copyOrderToClipboard() {
+            const name = document.getElementById('customerName').value.trim() || "[Your Name]";
+            const email = document.getElementById('customerEmail').value.trim() || "[Your Email]";
+            
+            if (cart.length === 0) {
+                alert('⚠️ Your cart is empty.');
+                return;
+            }
+            
+            const total = calculateTotal();
+            const orderItems = cart.map(item => 
+                `• ${item.nome} x${item.quantity} - $ ${(item.preco * item.quantity).toFixed(2).replace('.', ',')}`
+            ).join('\n');
+            
+            const textToCopy = `ORDER - CROSS WRAP PATTERN\n\n` +
+                              `Name: ${name}\n` +
+                              `Email: ${email}\n\n` +
+                              `ORDER ITEMS:\n${orderItems}\n\n` +
+                              `TOTAL: $ ${total.toFixed(2).replace('.', ',')}\n\n` +
+                              `---\nSend to: cross_wrap_pattern@hotmail.com`;
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert(`📋 Order copied successfully!\n\nNow:\n1. Open your email\n2. Paste the content\n3. Send to cross_wrap_pattern@hotmail.com\n\nTotal: $ ${total.toFixed(2).replace('.', ',')}`);
+            }).catch(() => {
+                alert('❌ Could not copy automatically. You can manually copy the information below.');
+            });
+        }
+
+        function renderBooks() {
+            const grid = document.getElementById('booksGrid');
+            const filtered = getFilteredBooks();
+            
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div class="no-books">No patterns found</div>';
+                document.getElementById('bookCount').textContent = '0';
+                return;
+            }
+            
+            grid.innerHTML = filtered.map(book => {
+                const inCart = isInCart(book.id);
+                return `
+                    <div class="book-card">
+                        <img src="${book.imagem || 'imagens/placeholder.jpg'}" alt="${book.nome}" class="book-image" onerror="this.src='https://via.placeholder.com/280x350?text=No+Image'">
+                        <div class="book-info">
+                            <h3 class="book-title">${book.nome}</h3>
+                            <div class="book-price ${book.preco === 0 ? 'free' : ''}">
+                                ${book.preco === 0 ? 'FREE' : `$ ${book.preco.toFixed(2).replace('.', ',')}`}
+                            </div>
+                            <div class="book-tags">
+                                ${book.tags ? book.tags.map(tag => `<span class="book-tag">${tag}</span>`).join('') : ''}
+                            </div>
+                            ${book.preco === 0 ? 
+                                `<a href="${book.link}" target="_blank" class="book-link">🔍 OPEN LINK</a>` :
+                                `
+                                <div class="cart-checkbox">
+                                    <input type="checkbox" id="check_${book.id}" ${inCart ? 'checked' : ''} onchange="addToCart('${book.id}', '${book.nome.replace(/'/g, "\\'")}', ${book.preco})">
+                                    <label for="check_${book.id}">🛒 Add to cart - $ ${book.preco.toFixed(2).replace('.', ',')}</label>
+                                </div>
+                                <a href="${book.link}" target="_blank" class="book-link secondary">🔍 VIEW DETAILS</a>
+                                `
+                            }
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            document.getElementById('bookCount').textContent = filtered.length;
             document.getElementById('currentTag').textContent = currentTag.toLowerCase();
         }
 
-        // Inicializar
+        function updateStats() {
+            const total = booksData.length;
+            const free = booksData.filter(b => b.preco === 0).length;
+            const showing = getFilteredBooks().length;
+            document.getElementById('statsBar').innerHTML = `
+                <strong>Total:</strong> ${total} patterns | 
+                <strong>Free:</strong> ${free} | 
+                <strong>To Buy:</strong> ${total - free} |
+                <strong>Showing:</strong> ${showing}
+            `;
+        }
+
+        document.getElementById('searchInput').addEventListener('input', handleSearch);
         document.addEventListener('DOMContentLoaded', loadBooks);
     </script>
 </body>

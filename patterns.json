@@ -1,5 +1,5 @@
 {
-  "tags_ativas": ["All", "Free","Buy", "pdf", "Download"],
+  "tags_ativas": ["All", "Free","Buy", "Buy Beginner"],
   "patterns": [
     {
       "id": "001",
@@ -48,8 +48,7 @@
       "preco": 0.00,
       "link": "free/chevronvariation.html",
       "tags": ["Free"]
-    },
-	
+    },	
 				{
       "id": "007",
       "nome": "Cross Target",
@@ -217,10 +216,1002 @@
       "preco": 0.00,
       "link": "free/diamond.html",
       "tags": ["Free"]
-    }			
-			
-		
+    },
+				{
+      "id": "027",
+      "nome": "Lakshmi",
+      "imagem": "imagens/lakshmi.jpg",
+      "preco": 0.00,
+      "link": "free/lakshmi.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "028",
+      "nome": "Hakuna Matata",
+      "imagem": "imagens/hakunamatata.jpg",
+      "preco": 0.00,
+      "link": "free/hakunamatata.html",
+      "tags": ["Free"]
+    },
+				{
+      "id": "029",
+      "nome": "Fragmente",
+      "imagem": "imagens/fragment.jpg",
+      "preco": 0.00,
+      "link": "free/fragment.html",
+      "tags": ["Free"]
+    },	
+				{
+      "id": "031",
+      "nome": "P01",
+      "imagem": "imagens/P01.jpg",
+      "preco": 5.00,
+      "link": "buy/P01.html",
+      "tags": ["Buy"]
+    },
+					{
+      "id": "032",
+      "nome": "P02",
+      "imagem": "imagens/P02.jpg",
+      "preco": 5.00,
+      "link": "buy/P02.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "033",
+      "nome": "P03",
+      "imagem": "imagens/P03.jpg",
+      "preco": 5.00,
+      "link": "buy/P03.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "034",
+      "nome": "P04",
+      "imagem": "imagens/P04.jpg",
+      "preco": 5.00,
+      "link": "buy/P04.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "035",
+      "nome": "P05",
+      "imagem": "imagens/P05.jpg",
+      "preco": 5.00,
+      "link": "buy/P05.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "036",
+      "nome": "P06",
+      "imagem": "imagens/P06.jpg",
+      "preco": 5.00,
+      "link": "buy/P06.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "037",
+      "nome": "P07",
+      "imagem": "imagens/P07.jpg",
+      "preco": 5.00,
+      "link": "buy/P07.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "038",
+      "nome": "P08",
+      "imagem": "imagens/P08.jpg",
+      "preco": 5.00,
+      "link": "buy/P08.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "039",
+      "nome": "P09",
+      "imagem": "imagens/P09.jpg",
+      "preco": 5.00,
+      "link": "buy/P09.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "040",
+      "nome": "P10",
+      "imagem": "imagens/P10.jpg",
+      "preco": 5.00,
+      "link": "buy/P10.html",
+      "tags": ["Buy"]
+    },
+    {
+     "id": "041",
+      "nome": "P11",
+      "imagem": "imagens/P11.jpg",
+      "preco": 5.00,
+      "link": "buy/P11.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "42",
+      "nome": "P12",
+      "imagem": "imagens/P12.jpg",
+      "preco": 5.00,
+      "link": "buy/P12.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "043",
+      "nome": "P13",
+      "imagem": "imagens/P13.jpg",
+      "preco": 5.00,
+      "link": "buy/P13.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "044",
+      "nome": "P14",
+      "imagem": "imagens/P14.jpg",
+      "preco": 5.00,
+      "link": "buy/P14.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "045",
+      "nome": "P15",
+      "imagem": "imagens/P15.jpg",
+      "preco": 5.00,
+      "link": "buy/P15.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "046",
+      "nome": "P16",
+      "imagem": "imagens/P16.jpg",
+      "preco": 5.00,
+      "link": "buy/P16.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "047",
+      "nome": "P17",
+      "imagem": "imagens/P17.jpg",
+      "preco": 5.00,
+      "link": "buy/P17.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "048",
+      "nome": "P18",
+      "imagem": "imagens/P18.jpg",
+      "preco": 5.00,
+      "link": "buy/P18.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "049",
+      "nome": "P19",
+      "imagem": "imagens/P19.jpg",
+      "preco": 5.00,
+      "link": "buy/P19.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "050",
+      "nome": "P20",
+      "imagem": "imagens/P20.jpg",
+      "preco": 5.00,
+      "link": "buy/P20.html",
+      "tags": ["Buy"]
+    },
+{
+     "id": "051",
+      "nome": "P21",
+      "imagem": "imagens/P21.jpg",
+      "preco": 5.00,
+      "link": "buy/P21.html",
+      "tags": ["Buy"]
+    },
+
+						{
+      "id": "052",
+      "nome": "P22",
+      "imagem": "imagens/P22.jpg",
+      "preco": 5.00,
+      "link": "buy/P22.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "053",
+      "nome": "P23",
+      "imagem": "imagens/P23.jpg",
+      "preco": 5.00,
+      "link": "buy/P23.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "054",
+      "nome": "P24",
+      "imagem": "imagens/P24.jpg",
+      "preco": 5.00,
+      "link": "buy/P24.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "055",
+      "nome": "P25",
+      "imagem": "imagens/P25.jpg",
+      "preco": 5.00,
+      "link": "buy/P25.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "056",
+      "nome": "P26",
+      "imagem": "imagens/P26.jpg",
+      "preco": 5.00,
+      "link": "buy/P26.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "057",
+      "nome": "P27",
+      "imagem": "imagens/P27.jpg",
+      "preco": 5.00,
+      "link": "buy/P27.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "058",
+      "nome": "P28",
+      "imagem": "imagens/P28.jpg",
+      "preco": 5.00,
+      "link": "buy/P28.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "059",
+      "nome": "P29",
+      "imagem": "imagens/P29.jpg",
+      "preco": 5.00,
+      "link": "buy/P29.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "060",
+      "nome": "P30",
+      "imagem": "imagens/P30.jpg",
+      "preco": 5.00,
+      "link": "buy/P30.html",
+      "tags": ["Buy"]
+    },
+{
+     "id": "061",
+      "nome": "P31",
+      "imagem": "imagens/P31.jpg",
+      "preco": 5.00,
+      "link": "buy/P31.html",
+      "tags": ["Buy"]
+    },
+
+						{
+      "id": "62",
+      "nome": "P32",
+      "imagem": "imagens/P32.jpg",
+      "preco": 5.00,
+      "link": "buy/P32.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "063",
+      "nome": "P33",
+      "imagem": "imagens/P33.jpg",
+      "preco": 5.00,
+      "link": "buy/P33.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "064",
+      "nome": "P34",
+      "imagem": "imagens/P34.jpg",
+      "preco": 5.00,
+      "link": "buy/P34.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "065",
+      "nome": "P35",
+      "imagem": "imagens/P35.jpg",
+      "preco": 5.00,
+      "link": "buy/P35.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "066",
+      "nome": "P36",
+      "imagem": "imagens/P36.jpg",
+      "preco": 5.00,
+      "link": "buy/P36.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "067",
+      "nome": "P37",
+      "imagem": "imagens/P37.jpg",
+      "preco": 5.00,
+      "link": "buy/P37.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "068",
+      "nome": "P38",
+      "imagem": "imagens/P38.jpg",
+      "preco": 5.00,
+      "link": "buy/P38.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "069",
+      "nome": "P39",
+      "imagem": "imagens/P39.jpg",
+      "preco": 5.00,
+      "link": "buy/P39.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "070",
+      "nome": "P40",
+      "imagem": "imagens/P40.jpg",
+      "preco": 5.00,
+      "link": "buy/P40.html",
+      "tags": ["Buy"]
+    },
+{
+     "id": "071",
+      "nome": "P41",
+      "imagem": "imagens/P41.jpg",
+      "preco": 5.00,
+      "link": "buy/P41.html",
+      "tags": ["Buy"]
+    },
+
+						{
+      "id": "072",
+      "nome": "P42",
+      "imagem": "imagens/P42.jpg",
+      "preco": 5.00,
+      "link": "buy/P42.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "073",
+      "nome": "P43",
+      "imagem": "imagens/P43.jpg",
+      "preco": 5.00,
+      "link": "buy/P43.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "074",
+      "nome": "P44",
+      "imagem": "imagens/P44.jpg",
+      "preco": 5.00,
+      "link": "buy/P44.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "075",
+      "nome": "P45",
+      "imagem": "imagens/P45.jpg",
+      "preco": 5.00,
+      "link": "buy/P45.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "076",
+      "nome": "P46",
+      "imagem": "imagens/P46.jpg",
+      "preco": 5.00,
+      "link": "buy/P46.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "077",
+      "nome": "P47",
+      "imagem": "imagens/P47.jpg",
+      "preco": 5.00,
+      "link": "buy/P47.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "078",
+      "nome": "P48",
+      "imagem": "imagens/P48.jpg",
+      "preco": 5.00,
+      "link": "buy/P48.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "079",
+      "nome": "P49",
+      "imagem": "imagens/P49.jpg",
+      "preco": 5.00,
+      "link": "buy/P49.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "070",
+      "nome": "P50",
+      "imagem": "imagens/P50.jpg",
+      "preco": 5.00,
+      "link": "buy/P50.html",
+      "tags": ["Buy"]
+    },
+{
+     "id": "081",
+      "nome": "P51",
+      "imagem": "imagens/P51.jpg",
+      "preco": 5.00,
+      "link": "buy/P51.html",
+      "tags": ["Buy"]
+    },
+
+						{
+      "id": "082",
+      "nome": "P52",
+      "imagem": "imagens/P52.jpg",
+      "preco": 5.00,
+      "link": "buy/P52.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "083",
+      "nome": "P53",
+      "imagem": "imagens/P53.jpg",
+      "preco": 5.00,
+      "link": "buy/P53.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "084",
+      "nome": "P54",
+      "imagem": "imagens/P54.jpg",
+      "preco": 5.00,
+      "link": "buy/P54.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "085",
+      "nome": "P55",
+      "imagem": "imagens/P55.jpg",
+      "preco": 5.00,
+      "link": "buy/P55.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "086",
+      "nome": "P56",
+      "imagem": "imagens/P56.jpg",
+      "preco": 5.00,
+      "link": "buy/P56.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "087",
+      "nome": "P57",
+      "imagem": "imagens/P57.jpg",
+      "preco": 5.00,
+      "link": "buy/P57.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "088",
+      "nome": "P58",
+      "imagem": "imagens/P58.jpg",
+      "preco": 5.00,
+      "link": "buy/P58.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "089",
+      "nome": "P59",
+      "imagem": "imagens/P59.jpg",
+      "preco": 5.00,
+      "link": "buy/P59.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "090",
+      "nome": "P60",
+      "imagem": "imagens/P60.jpg",
+      "preco": 5.00,
+      "link": "buy/P60.html",
+      "tags": ["Buy"]
+    },
+{
+     "id": "091",
+      "nome": "P61",
+      "imagem": "imagens/P61.jpg",
+      "preco": 5.00,
+      "link": "buy/P61.html",
+      "tags": ["Buy"]
+    },
+
+						{
+      "id": "092",
+      "nome": "P62",
+      "imagem": "imagens/P62.jpg",
+      "preco": 5.00,
+      "link": "buy/P62.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "093",
+      "nome": "P63",
+      "imagem": "imagens/P63.jpg",
+      "preco": 5.00,
+      "link": "buy/P63.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "094",
+      "nome": "P64",
+      "imagem": "imagens/P64.jpg",
+      "preco": 5.00,
+      "link": "buy/P64.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "095",
+      "nome": "P65",
+      "imagem": "imagens/P65.jpg",
+      "preco": 5.00,
+      "link": "buy/P65.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "096",
+      "nome": "P66",
+      "imagem": "imagens/P66.jpg",
+      "preco": 5.00,
+      "link": "buy/P66.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "097",
+      "nome": "P67",
+      "imagem": "imagens/P67.jpg",
+      "preco": 5.00,
+      "link": "buy/P67.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "098",
+      "nome": "P68",
+      "imagem": "imagens/P68.jpg",
+      "preco": 5.00,
+      "link": "buy/P68.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "099",
+      "nome": "P69",
+      "imagem": "imagens/P69.jpg",
+      "preco": 5.00,
+      "link": "buy/P69.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "100",
+      "nome": "P70",
+      "imagem": "imagens/P70.jpg",
+      "preco": 5.00,
+      "link": "buy/P60.html",
+      "tags": ["Buy"]
+    },
+{
+     "id": "101",
+      "nome": "P71",
+      "imagem": "imagens/P71.jpg",
+      "preco": 5.00,
+      "link": "buy/P71.html",
+      "tags": ["Buy"]
+    },
+
+						{
+      "id": "102",
+      "nome": "P72",
+      "imagem": "imagens/P72.jpg",
+      "preco": 5.00,
+      "link": "buy/P72.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "103",
+      "nome": "P73",
+      "imagem": "imagens/P73.jpg",
+      "preco": 5.00,
+      "link": "buy/P73.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "104",
+      "nome": "P74",
+      "imagem": "imagens/P74.jpg",
+      "preco": 5.00,
+      "link": "buy/P74.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "105",
+      "nome": "P75",
+      "imagem": "imagens/P75.jpg",
+      "preco": 5.00,
+      "link": "buy/P75.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "106",
+      "nome": "P76",
+      "imagem": "imagens/P76.jpg",
+      "preco": 5.00,
+      "link": "buy/P76.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "107",
+      "nome": "P77",
+      "imagem": "imagens/P77.jpg",
+      "preco": 5.00,
+      "link": "buy/P77.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "108",
+      "nome": "P78",
+      "imagem": "imagens/P78.jpg",
+      "preco": 5.00,
+      "link": "buy/P78.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "109",
+      "nome": "P79",
+      "imagem": "imagens/P79.jpg",
+      "preco": 5.00,
+      "link": "buy/P79.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "110",
+      "nome": "P80",
+      "imagem": "imagens/P80.jpg",
+      "preco": 5.00,
+      "link": "buy/P80.html",
+      "tags": ["Buy"]
+    },
+{
+     "id": "111",
+      "nome": "P81",
+      "imagem": "imagens/P81.jpg",
+      "preco": 5.00,
+      "link": "buy/P81.html",
+      "tags": ["Buy"]
+    },
+
+						{
+      "id": "112",
+      "nome": "P82",
+      "imagem": "imagens/P82.jpg",
+      "preco": 5.00,
+      "link": "buy/P82.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "113",
+      "nome": "P83",
+      "imagem": "imagens/P83.jpg",
+      "preco": 5.00,
+      "link": "buy/P83.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "114",
+      "nome": "P84",
+      "imagem": "imagens/P84.jpg",
+      "preco": 5.00,
+      "link": "buy/P84.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "115",
+      "nome": "P85",
+      "imagem": "imagens/P85.jpg",
+      "preco": 5.00,
+      "link": "buy/P85.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "116",
+      "nome": "P86",
+      "imagem": "imagens/P86.jpg",
+      "preco": 5.00,
+      "link": "buy/P86.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "117",
+      "nome": "P87",
+      "imagem": "imagens/P87.jpg",
+      "preco": 5.00,
+      "link": "buy/P87.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "118",
+      "nome": "P88",
+      "imagem": "imagens/P88.jpg",
+      "preco": 5.00,
+      "link": "buy/P88.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "119",
+      "nome": "P89",
+      "imagem": "imagens/P89.jpg",
+      "preco": 5.00,
+      "link": "buy/P89.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "120",
+      "nome": "P90",
+      "imagem": "imagens/P90.jpg",
+      "preco": 5.00,
+      "link": "buy/P90.html",
+      "tags": ["Buy"]
+    },
+						{
+      "id": "121",
+      "nome": "B01",
+      "imagem": "imagens/B01.jpg",
+      "preco": 3.00,
+      "link": "beginner/B01.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "122",
+      "nome": "B02",
+      "imagem": "imagens/B02.jpg",
+      "preco": 3.00,
+      "link": "beginner/B02.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "123",
+      "nome": "B03",
+      "imagem": "imagens/B03.jpg",
+      "preco": 3.00,
+      "link": "beginner/B03.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "124",
+      "nome": "B04",
+      "imagem": "imagens/B04.jpg",
+      "preco": 3.00,
+      "link": "beginner/B04.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "125",
+      "nome": "B05",
+      "imagem": "imagens/B05.jpg",
+      "preco": 3.00,
+      "link": "beginner/B05.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "126",
+      "nome": "B06",
+      "imagem": "imagens/B06.jpg",
+      "preco": 3.00,
+      "link": "beginner/B06.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "127",
+      "nome": "B07",
+      "imagem": "imagens/B07.jpg",
+      "preco": 3.00,
+      "link": "beginner/B07.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "128",
+      "nome": "B08",
+      "imagem": "imagens/B08.jpg",
+      "preco": 3.00,
+      "link": "beginner/B08.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "129",
+      "nome": "B09",
+      "imagem": "imagens/B09.jpg",
+      "preco": 3.00,
+      "link": "beginner/B09.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "130",
+      "nome": "B10",
+      "imagem": "imagens/B10.jpg",
+      "preco": 3.00,
+      "link": "beginner/B10.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "131",
+      "nome": "B11",
+      "imagem": "imagens/B11.jpg",
+      "preco": 3.00,
+      "link": "beginner/B11.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "132",
+      "nome": "B12",
+      "imagem": "imagens/B12.jpg",
+      "preco": 3.00,
+      "link": "beginner/B12.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "133",
+      "nome": "B13",
+      "imagem": "imagens/B13.jpg",
+      "preco": 3.00,
+      "link": "beginner/B13.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "134",
+      "nome": "B14",
+      "imagem": "imagens/B14.jpg",
+      "preco": 3.00,
+      "link": "beginner/B14.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "135",
+      "nome": "B15",
+      "imagem": "imagens/B15.jpg",
+      "preco": 3.00,
+      "link": "beginner/B15.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "136",
+      "nome": "B16",
+      "imagem": "imagens/B16.jpg",
+      "preco": 3.00,
+      "link": "beginner/B16.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "137",
+      "nome": "B17",
+      "imagem": "imagens/B17.jpg",
+      "preco": 3.00,
+      "link": "beginner/B17.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "138",
+      "nome": "B18",
+      "imagem": "imagens/B18.jpg",
+      "preco": 3.00,
+      "link": "beginner/B18.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "139",
+      "nome": "B19",
+      "imagem": "imagens/B19.jpg",
+      "preco": 3.00,
+      "link": "beginner/B19.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "140",
+      "nome": "B20",
+      "imagem": "imagens/B20.jpg",
+      "preco": 3.00,
+      "link": "beginner/B20.html",
+      "tags": ["Buy Beginner"]
+    },	
+						{
+      "id": "141",
+      "nome": "B21",
+      "imagem": "imagens/B21.jpg",
+      "preco": 3.00,
+      "link": "beginner/B21.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "142",
+      "nome": "B22",
+      "imagem": "imagens/B22.jpg",
+      "preco": 3.00,
+      "link": "beginner/B22.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "143",
+      "nome": "B23",
+      "imagem": "imagens/B23.jpg",
+      "preco": 3.00,
+      "link": "beginner/B23.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "144",
+      "nome": "B24",
+      "imagem": "imagens/B24.jpg",
+      "preco": 3.00,
+      "link": "beginner/B24.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "145",
+      "nome": "B25",
+      "imagem": "imagens/B25.jpg",
+      "preco": 3.00,
+      "link": "beginner/B25.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "146",
+      "nome": "B26",
+      "imagem": "imagens/B26.jpg",
+      "preco": 3.00,
+      "link": "beginner/B26.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "147",
+      "nome": "B27",
+      "imagem": "imagens/B27.jpg",
+      "preco": 3.00,
+      "link": "beginner/B27.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "148",
+      "nome": "B28",
+      "imagem": "imagens/B28.jpg",
+      "preco": 3.00,
+      "link": "beginner/B28.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "149",
+      "nome": "B29",
+      "imagem": "imagens/B29.jpg",
+      "preco": 3.00,
+      "link": "beginner/B29.html",
+      "tags": ["Buy Beginner"]
+    },
+						{
+      "id": "140",
+      "nome": "B30",
+      "imagem": "imagens/B30.jpg",
+      "preco": 3.00,
+      "link": "beginner/B20.html",
+      "tags": ["Buy Beginner"]
+    }	
 	
 	
   ]
 }
+
+
+
