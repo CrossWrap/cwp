@@ -738,7 +738,7 @@
                 const inCart = isInCart(book.id);
                 return `
                     <div class="book-card">
-                        <img src="${book.imagem || 'imagens/placeholder.jpg'}" alt="${book.nome}" class="book-image" onerror="this.src='https://via.placeholder.com/280x350?text=No+Image'">
+                        <img src="${book.imagem || 'imagen/placeholder.jpg'}" alt="${book.nome}" class="book-image" onerror="this.src='https://via.placeholder.com/280x350?text=No+Image'">
                         <div class="book-info">
                             <h3 class="book-title">${book.nome}</h3>
                             <div class="book-price ${book.preco === 0 ? 'free' : ''}">
